@@ -1,0 +1,161 @@
+/* Dyhan CSS */
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.my-gallery {
+object-fit: cover;
+width: 700px;
+height: 400px;
+border-radius: 120px 30px 120px 30px;
+}
+
+.footer {
+  padding-top:4rem;
+  padding-bottom:4rem;
+}
+
+.my-text {
+  color: #7952B3;
+  font-weight: normal;
+}
+/* End of Dyhan CSS */
+
+
+
+/* Fuad CSS */
+.skip-nav {
+  margin-top:56px;
+}
+
+img {
+  max-width: 100%;
+}
+.overlay{
+  height: 480px;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(121, 82, 179, 0.6),
+      rgba(121, 82, 179, 0.6)
+    ),url("https://shopee.co.id/inspirasi-shopee/wp-content/uploads/2018/05/ayana.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.title { 
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  margin: 0;
+}
+
+.signup-form {
+  padding: 15px;
+  background: #fafafa;
+}
+
+.form-control {
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 20px;
+  &:focus {border-color: #111;}
+}
+[type="text"] {color: #111;}
+[type="password"] {color: #111;}
+.btn-form {
+  position: relative;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background: #7952B3;
+  border-radius: 30px;
+  &:focus,
+  &:hover {background: lighten(#111, 13%);}
+}
+/* End of Fuad CSS */
+
+
+
+
+/* Yoga CSS */
+.hub-kami {
+  font-family: "Graphik-Medium";
+}
+
+.title-hub {
+  width: 50%;
+  height: 50%;
+  border-radius: 50, 10, 5, 0;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 600px;
+
+}
+
+.title-hub h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500px;
+  overflow-y: hidden;
+  margin-bottom: 1rem;
+  color: #777777;
+}
+
+.btn-hub {
+  background-color: #7952b3;
+  color: white;
+  border-radius: 10px;
+}
+/* End of Yoga CSS */
+
+/* Marcel */
+.login {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}       
+.skip-nav-login{
+margin-top:72px;
+}    
+
+/* Iren */
+
+.btn-tentang {
+  background: #fbf7f0;
+  color: #686d76;
+  size: initial;
+  width: 100%;
+  height: max-content;
+}
+#hidden{
+  visibility: hidden;
+}
+.btn-tentang:hover{
+  background: #8675a9;
+  color: #fff0f0;
+}
+.btn-tentang:hover #hidden{
+  visibility: visible;
+}
+
+.sizefix{
+  width: 90px;
+}
