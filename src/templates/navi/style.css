@@ -1,0 +1,21 @@
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #dce0d9;
+    /* margin: 0 8px; */
+    padding: 10px;
+}
+
+.title {
+    flex: 1;
+    color: black;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    font-size: 20px;
+}
+
+.logonya {
+    height: 28px;
+    padding:10px 0 10px 5px;
+    margin-left: 10px;
+}

@@ -1,0 +1,23 @@
+.column {
+    float: left;
+    /* width:  */
+    padding: 0 10px;
+}
+
+.row {
+    margin: 130px 30px 10px 155px;
+}
+
+/* .row:after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+@media screen and (max-width: 100%) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}
