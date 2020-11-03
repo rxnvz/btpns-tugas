@@ -14,18 +14,32 @@ app.use(express.static("public"))
 
 let userData = [
     {
+        name: "admin",
+        email: "admin@admin.com",
+        username: "admin",
+        password: "123",
+        role: "adm"
+    },
+    {
         name: "namu",
         email: "namu@gi.com",
         username: "namu",
         password: "namu",
-        role: ""
+        role: "user"
     },
     {
         name: "nyom",
         email: "nyom@gi.com",
         username: "nyom",
         password: "nyom",
-        role: ""
+        role: "user"
+    },
+    {
+        name: "rne",
+        email: "rne@nam.gi",
+        username: "rne",
+        password: "rne",
+        role: "user"
     },
 ]
 
@@ -35,70 +49,61 @@ app.use(function(req, res, next) {
     next();
 });
 
+//Data user
 app.get("/data", (req, res) => {
     res.send(userData)
 })
 
-// app.use((req, res, next) => {
-//     // res.status(200).json({
-//     //     message: "Halo :D"
-//     // })
-//     next()
-// })
+//Hapus user
+app.delete("/user/:username", (req, res) => {
+    userData = userData.filter(user => {
+        return user.username !== req.params.username;
+    })
 
-// app.get("/test", (req, res) => {
-//     res.send({
-//         message: "Hello /!!"
-//     })
-// })
+    return res.json(userData)
+})
 
-// //Edit User
-// app.put("/user/:username", (req, res) => {
-//     // res.send({
-//     //     message: `Hello ${req.params.username} :D`
-//     // })
+//Regis user
+app.post("/regis", (req, res) => {
+    const newUser = {
+        name: req.body.name ,
+        email: req.body.email ,
+        username: req.body.username,
+        password: req.body.password,
+        role: req.body.role,
+    }
 
-//     const edited = userData.filter()
+    userData.push(newUser)
+    return res.json(userData)
+    
+})
 
-// })
+//Edit User
+app.put("/user/:username", (req, res) => {
+    const x = userData.find( user => { //nyari yang username-nya sesuai sama di data
+        return user.username === req.params.username
+    })
 
-// // Hapus user
-// app.delete("/user/:username", (req, res) => {
-//     // res.send({
-//     //     message: `Hello ${req.params.username} :D`
-//     // })
+    if (x) {
+        const newUser = {
+            name: req.body.name ,
+            email: req.body.email ,
+            username: x.username,
+            password: req.body.password,
+            role: req.body.role,
+        }
+        const theX = userData.indexOf(x) //buat nyari index data yang ketemu tadi
+        userData.splice(theX, 1, newUser) //buat diganti datanyaaaa
+    }
 
-//     userData = userData.filter(user => {
-//         return user.name !== req.params.name;
-//     })
-
-//     return res.json(userData)
-// })
+    return res.json(userData)
+})
 
 // app.post("/login", (req, res) => {
 //     console.log("req: ", req.query)
 //     res.send({
 //         message: "Hello /!!"
 //     })
-// })
-
-// //Regis user
-// app.post("/register", (req, res) => {
-//     // console.log("req: ", req.body)
-//     // res.send({
-//     //     message: "Hello /!!"
-//     // })
-
-//     const newUser = {
-//         name: req.body.name ,
-//         email: req.body.email ,
-//         username: req.body.username,
-//         password: req.body.password,
-//     }
-
-//     userData.push(newUser)
-//     return res.json(userData)
-    
 // })
 
 module.exports = app
