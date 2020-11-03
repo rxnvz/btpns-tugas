@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./style.css";
 import { Switch, Route } from "react-router-dom"
-import {About, Login, Register} from "../../pages"
+import { About, Login, Register } from "../../pages"
 import { connect } from "react-redux";
 
 class Body extends Component {
@@ -19,33 +19,16 @@ class Body extends Component {
         }
     }
 
-    // componentDidMount = () => {
-    //     fetch('https://jsonplaceholder.typicode.com/users')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             const dataUser = data.map(user =>({
-    //                 ...user,
-    //                 password: "pass",
-    //                 role: "user",
-    //             }));
-
-    //             this.props.doFetch({ 
-    //                 userData: [...this.state.admin, ...dataUser]
-    //             })
-    //         })
-    // }
-
     componentDidMount = () => {
         fetch('http://localhost:3001/data')
        .then(response => response.json())
        .then(data => {
            const dataUser = data.map(user => ({
-               ...user,
-               role: "user"
+               ...user
            }))
         
            this.props.doFetch({
-               userData: [...this.state.admin, ...dataUser]
+               userData: [ ...dataUser]
            })
         })    
     }
@@ -62,20 +45,6 @@ class Body extends Component {
                 </Route>
             </Switch>
         )
-    }
-
-    addUsers = obj => { //From register
-        const { name, email, username, password } = obj
-        const userData = [...this.state.userData]
-        userData.push({
-            'name': name,
-            'email': email,
-            'username': username,
-            'password': password
-        })
-        this.setState({ userData })
-        alert("Data berhasil diinput.")
-        console.log(this.state.userData);
     }
 
     render() { 
