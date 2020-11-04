@@ -1,0 +1,16 @@
+.kaki {
+    background-color: #e1e1e1;
+    /* max-width: 100%; */
+    color: #5b5b5b;
+    padding-left: 30px;
+    width: 100%;
+    /* margin: 0 8px; */
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+.anak-kaki {
+    display: flex;
+    justify-content: flex-end;
+}
