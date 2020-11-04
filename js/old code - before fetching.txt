@@ -1,0 +1,209 @@
+// alternate
+// switch (user.email == email && user.pass == passw) {
+//     case true:
+//         userSession.push(user);
+//         navi();
+//         alert("Login Berhasil");
+//         show('home','index','login','about','contact', 'regis');
+//         break;
+//     default:
+//         alert("Maaf, e-mail dan password tidak sesuai atau tidak terdaftar.");
+// }
+
+// let logged = allData.find(user => user.email == email && user.pass == passw)
+// if (logged == true) {
+//     userSession.push(logged)
+//         navi()
+//         alert("Login Berhasil")
+//         show('home','index','login','about','contact', 'regis')
+// } else alert("Maaf, e-mail dan password tidak sesuai atau tidak terdaftar.")
+
+// if (email && passw) {
+//     var statusLogin = dataUsers.find(user => email == user.email)
+// }
+
+// let logged = allData.find(user => {
+//     if (user.email == email && user.pass == passw) {
+//         userSession.push(user);
+//         navi();
+//         alert("Login Berhasil");
+//         show('home','index','login','about','contact', 'regis');
+//     } //else alert("Maaf, e-mail dan password tidak sesuai atau tidak terdaftar.");
+// })
+
+// ar login = async() => {
+//     var email     = document.getElementById("email-log").value;
+//     var passw     = document.getElementById("pass-log").value;
+
+//     await fetch('https://jsonplaceholder.typicode.com/users')
+//         .then(response => response.json())
+//         .then(data => {allData = data})
+//         .catch(err => console.warn("err ", err))
+
+//     if (email) {
+//         var statusLog = allData.find(user => email == user.email)
+
+//         if (passw = "") {
+//             allData.password = passdef;
+//         }
+
+//         if (statusLog) {
+//             alert("Login Berhasil")
+//             navi()
+//             show('home','index','login','about','contact', 'regis');
+//         } else alert("Maaf, e-mail dan password tidak sesuai atau tidak terdaftar.")
+//     }
+// }
+
+// var dataAlbum = async() =>{
+//     await fetch('https://jsonplaceholder.typicode.com/albums')
+//         .then(response => response.json())
+//         .then(data => {albums = data})
+//         .catch(err => console.warn("err ", err))
+// }
+
+// function showData() {
+//     for (i=0; i<allData.length; i++) {
+//         tr += `
+//             <tr>
+//                 <td>${i + 1}</td>
+//                 <td>${allData[i].email}</td>
+//                 <td>${allData[i].nama}</td>
+//                 <td>${allData[i].pass}</td>
+//                 <td>
+//                     <a onClick="updateData(${i})" href=# >Ubah </a> ||
+//                     <a onClick="deleteData(${i})" href=# > Hapus</a>
+//                 </td>
+//             </tr>
+//         `;
+//     }
+//     tableData.innerHTML = tr    
+// }
+
+// function login() {
+    //     var email     = document.getElementById("email-log").value;
+    //     var passw     = document.getElementById("pass-log").value;
+    
+    //     for (var i=0; i<allData.length; i++) {
+        //         if (allData[i][0] == email && allData[i][2] == passw) {
+            //             userSession.push(allData[i]);
+            //             navi();
+//             alert("Login Berhasil");
+//             show('home','index','login','about','contact', 'regis');
+//         } else {
+//             alert("Maaf, e-mail dan password tidak sesuai atau tidak terdaftar.");
+//         }
+//     }
+//     console.log("logged: " + userSession);
+// }
+// function showData() {
+//     var tableData = document.getElementsByClassName("tableData")[0];
+//     var tr = tableData.children[0].children[0].outerHTML;
+    
+//     var seeData = allData.filter((user, index) => {
+//         tr += `
+//         <tr>
+//         <td>${user.email}</td>
+//         <td>${user.nama}</td>
+//         <td>${user.pass}</td>
+//         <td>
+//         <a onClick="updateData(${index})" href=# >Ubah </a> ||
+//         <a onClick="deleteData(${index})" href=# > Hapus</a>
+//         </td>
+//         </tr>
+//         `
+//     })
+//     tableData.innerHTML = tr
+// }
+// function addData() {
+//     var form  = document.regis
+//     var mail  = form.mail.value
+//     var nama  = form.nama.value
+//     var pass  = form.password.value
+//     var passVal = form.passwordRepeat.value
+    
+//     if (pass != passVal) {
+//         alert("Sandi yang dimasukkan tidak sama!")
+//     } else {
+//         var dataReg = {
+//             "email"  : mail,
+//             "nama"   : nama,
+//             "pass"   : pass  
+//         }
+//         allData.push(dataReg)
+//         alert("Data Berhasil dimasukkan.")
+//         showData()
+//         form.reset()
+//     }   
+// }
+
+// function deleteData(id) {
+//     allData.splice(id, 1);
+//     showData();
+// }
+
+// function updateData(id) {
+//     var form  = document.editForm
+//     var email = form.mails.value = allData[id].email;
+//     var namaa = form.namas.value = allData[id].nama;
+//     var passs = form.passw.value = allData[id].pass;
+
+//     allData[id].email = email;
+//     allData[id].nama = namaa;
+//     allData[id].pass = passs;
+
+//     // showData();
+//     // resetForm();
+//     // console.log(id);
+// }
+
+// function editedData() {
+//     var form = document.editForm
+//     var edited = {
+//         "email" : form.mail.value,
+//         "nama"  : form.nama.value,
+//         "pass"  : form.password.value
+//     }
+
+//     var i = allData.length;
+//     allData[i] = edited;
+
+//     alert("Data berhasil dirubah!");
+//     showData();
+//     form.reset()
+// // }
+// if (userlog) {
+//     var tr2 = allAlbum.map(alb, index) => {
+//         if (userlog == alb.userId) {
+//             return `<tr>
+//             <td>${index + 1}</td>
+//             <td>${alb.title}</td>
+//             </tr>`
+//         }
+//     }
+// } else {
+//     await fetch('https://jsonplaceholder.typicode.com/users')
+//         .then(response => response.json())
+//         .then(data => {userData = data.id})
+//         .catch(err => console.warn("err ", err))
+    
+//         var gabs = []
+//         for (let i = 0; i < userData.length; i++) {
+//             for (let j = 0; j < allAlbum.length; j++) {
+//                 if (userData[i].id == allAlbum[j].userId) {
+//                     var merg = {
+//                         name: userData[i].name,
+//                         album: allAlbum[j].title,
+//                     }
+//                     gabs.push(merg)
+//                 }
+//             }
+//         }
+//         gabs.map((m, indx) =>{
+//             return `<tr>
+//                         <td>${indx + 1}</td>
+//                         <td>${m.title}</td>
+//                         <td>${m.name}</td>
+//                     </tr>`
+//         })
+//     }
