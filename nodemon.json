@@ -1,0 +1,9 @@
+{
+    "env": {
+        "JWT_KEY": "namugi",
+        "MYSQL_HOST": "localhost",
+        "MYSQL_DB": "btpn-shifted",
+        "MYSQL_USER": "root",
+        "MYSQL_PASS": ""
+    }
+}
